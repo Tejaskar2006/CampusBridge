@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management - Faculty Portal</title>
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+    <div class="attendance-container">
+        <div class="attendance-header">
+            <h2>Mark Attendance</h2>
+            <div class="header-info">
+                <span id="facultyName"></span>
+                <span id="departmentInfo"></span>
+            </div>
+        </div>
+
+        <form id="attendanceForm" class="attendance-form">
+            <div class="form-group">
+                <label for="attendanceDate">Date:</label>
+                <input type="date" id="attendanceDate" required>
+            </div>
+
+            <div id="studentList" class="student-list">
+                <!-- Students will be loaded here -->
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Submit Attendance</button>
+                <button type="button" class="btn-secondary" onclick="loadAttendanceRecords(document.getElementById('attendanceDate').value)">View Records</button>
+            </div>
+        </form>
+
+        <div id="attendanceRecords" class="attendance-records">
+            <!-- Attendance records will be displayed here -->
+        </div>
+    </div>
+
+    <script src="js/attendance.js"></script>
+</body>
+</html>

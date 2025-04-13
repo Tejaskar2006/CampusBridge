@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Campus Bridge</title>
+    <link rel="stylesheet" href="style.css"></head>
+
+<body>
+    <div class="container">
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" onchange="handleRoleChange()" required>
+                        <option value="">Select Role</option>
+                        <option value="student">Student</option>
+                        <option value="faculty">Faculty</option>
+                    </select>
+                </div>
+
+                <!-- Common Fields -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" required>
+                </div>
+
+                <!-- Student-specific fields -->
+                <div id="studentFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input type="date" id="dateOfBirth">
+                    </div>
+                    <div class="form-group">
+                        <label for="section">Section</label>
+                        <input type="text" id="section">
+                    </div>
+                </div>
+
+                <!-- Faculty-specific fields -->
+                <div id="facultyFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="subjects">Subjects (comma-separated)</label>
+                        <input type="text" id="subjects" placeholder="e.g., Math, Physics, Chemistry">
+                    </div>
+                    <div class="form-group">
+                        <label for="sections">Sections (comma-separated)</label>
+                        <input type="text" id="sections" placeholder="e.g., A, B, C">
+                    </div>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+
+</html>

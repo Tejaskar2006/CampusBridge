@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard - Campus Bridge</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="sidebar">
+            <div class="profile-section">
+                <div class="profile-info">
+                    <img id="profileImage" src="../assets/default-profile.png" alt="Profile">
+                    <h3 id="facultyName">Loading...</h3>
+                    <p id="facultyDepartment">Department</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="coursecontent.html"><i class="fas fa-book"></i> Course Content</a>
+                </li>
+                <li>
+                    <a href="attendance.html"><i class="fas fa-clipboard-list"></i> Attendance</a>
+                </li>
+                <li>
+                    <a href="assignments.html"><i class="fas fa-tasks"></i> Assignments</a>
+                </li>
+                <li>
+                    <a href="quizzes.html"><i class="fas fa-question-circle"></i> Quizzes</a>
+                </li>
+            </ul>
+            <button id="logoutBtn" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="top-nav">
+                    <a href="#" class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="quick-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-info">
+                            <h3>Total Students</h3>
+                            <p id="totalStudents">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-book-open"></i>
+                        <div class="stat-info">
+                            <h3>Courses</h3>
+                            <p id="totalCourses">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <div class="stat-info">
+                            <h3>Classes Today</h3>
+                            <p id="todayClasses">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sections-grid" id="sectionsContainer">
+                    <!-- Sections will be dynamically added here -->
+                </div>
+
+                <div class="recent-activities">
+                    <h2>Recent Activities</h2>
+                    <div id="activitiesList" class="activities-list">
+                        <!-- Activities will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

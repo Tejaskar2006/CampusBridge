@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Overview - Student Portal</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+    <div class="attendance-container">
+        <div class="attendance-header">
+            <h2>My Attendance Overview</h2>
+            <div class="attendance-summary">
+                <div class="summary-card">
+                    <h3>Overall Attendance</h3>
+                    <span id="overallPercentage">--</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Classes</h3>
+                    <span id="totalClasses">--</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="attendanceChart"></canvas>
+        </div>
+
+        <div class="attendance-details">
+            <h3>Attendance History</h3>
+            <div id="attendanceHistory" class="history-list"></div>
+        </div>
+    </div>
+    <script src="js/attendance.js"></script>
+</body>
+</html>
